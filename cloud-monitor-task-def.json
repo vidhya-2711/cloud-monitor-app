@@ -1,7 +1,7 @@
 {
   "family": "cloud-monitor-task",
   "networkMode": "awsvpc",
-  "executionRoleArn": "arn:aws:iam::307946656345 :role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::307946656345:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "name": "cloud-monitor-app",
