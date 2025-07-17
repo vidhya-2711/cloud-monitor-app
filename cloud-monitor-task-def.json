@@ -1,11 +1,11 @@
 {
   "family": "cloud-monitor-task",
   "networkMode": "awsvpc",
-  "executionRoleArn": "arn:aws:iam::<YOUR_ACCOUNT_ID>:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::307946656345 :role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "name": "cloud-monitor-app",
-      "image": "<AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/<ECR_REPO>:latest",
+      "image": "307946656345.dkr.ecr.us-east-1.amazonaws.com/cloud-monitor-repo:latest",
       "portMappings": [
         {
           "containerPort": 5000,
