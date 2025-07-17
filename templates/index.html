@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AWS Cloud Monitor</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f5f5f5; }
+    h1 { color: #333; }
+    section { margin-bottom: 30px; background: white; padding: 20px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <h1>☁️ AWS Cloud Monitor Dashboard</h1>
+
+  <section>
+    <h2>EC2 Instances</h2>
+    <ul>
+      {% for i in instances %}
+        <li>{{ i.InstanceId }} - {{ i.State.Name }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>ECS Services</h2>
+    <ul>
+      {% for e in ecs_data %}
+        <li><strong>{{ e.cluster }}</strong>
+          <ul>
+            {% for s in e.services %}
+              <li>{{ s }}</li>
+            {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Lambda Functions</h2>
+    <ul>
+      {% for l in lambdas %}
+        <li>{{ l.FunctionName }} - {{ l.Runtime }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section>
+    <h2>S3 Buckets</h2>
+    <ul>
+      {% for b in buckets %}
+        <li>{{ b.Name }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+</body>
+</html>
