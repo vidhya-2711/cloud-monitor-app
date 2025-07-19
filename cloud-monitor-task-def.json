@@ -2,6 +2,7 @@
   "family": "cloud-monitor-task",
   "networkMode": "awsvpc",
   "executionRoleArn": "arn:aws:iam::307946656345:role/ecsTaskExecutionRole",
+   "taskRoleArn": "arn:aws:iam::307946656345:role/cloud-monitor-task-role", 
   "containerDefinitions": [
     {
       "name": "cloud-monitor-repo",
