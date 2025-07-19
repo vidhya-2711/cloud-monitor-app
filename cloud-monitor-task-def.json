@@ -4,7 +4,7 @@
   "executionRoleArn": "arn:aws:iam::307946656345:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
-      "name": "cloud-monitor-app",
+      "name": "cloud-monitor-repo",
       "image": "307946656345.dkr.ecr.us-east-1.amazonaws.com/cloud-monitor-repo:latest",
       "portMappings": [
         {
